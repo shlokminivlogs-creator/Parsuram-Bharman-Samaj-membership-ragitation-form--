@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parsuram Brahman Samaj | Membership Registration</title>
+<style>
+:root{--saffron:#b45309;--gold:#f4c95d;--ink:#262018;--cream:#fffaf0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#fff3d8,#fffdf7);color:var(--ink)}
+header{background:linear-gradient(120deg,#7c2d12,#b45309);color:white;text-align:center;padding:28px 16px;border-bottom:5px solid var(--gold)}
+header .symbol{font-size:36px}
+header h1{margin:8px 0;font-size:clamp(22px,5vw,34px)}
+header p{margin:6px 0 0}
+main{max-width:760px;margin:24px auto;padding:0 14px 30px}
+.card{background:white;border:1px solid #f0d9a6;border-radius:16px;padding:22px;box-shadow:0 8px 25px #7c2d1212}
+.notice{background:#fff7e6;border-left:4px solid var(--saffron);padding:12px;border-radius:8px;font-size:14px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{margin-top:15px}
+label{display:block;font-weight:700;font-size:14px;margin-bottom:7px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d7c8ad;border-radius:9px;font:inherit;background:#fffdfa}
+input:focus,select:focus,textarea:focus{outline:2px solid #f4c95d;border-color:#b45309}
+.full{grid-column:1/-1}
+button{border:0;border-radius:10px;padding:14px 18px;font-size:16px;font-weight:700;cursor:pointer;width:100%;margin-top:18px}
+.primary{background:#15803d;color:white}
+.secondary{background:#fff1cf;color:#7c2d12;border:1px solid #e9c879}
+.small{font-size:12px;color:#6b6255;line-height:1.5}
+footer{text-align:center;padding:18px;font-size:13px;color:#6b6255}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.card{padding:16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="symbol">🕉️</div>
+  <h1>Parsuram Brahman Samaj</h1>
+  <p>Membership Registration Form</p>
+  <p>परशुराम ब्राह्मण समाज — सदस्यता पंजीकरण</p>
+</header>
+<main>
+  <section class="card">
+    <p class="notice">Please fill in the correct details. When you tap <b>Send Registration on WhatsApp</b>, WhatsApp will open with your form details ready to send to the Samaj contact number.</p>
+    <form id="membershipForm">
+      <div class="grid">
+        <div class="field">
+          <label for="fullName">Full Name / पूरा नाम *</label>
+          <input id="fullName" name="Full Name" required autocomplete="name" placeholder="Enter member's full name">
+        </div>
+        <div class="field">
+          <label for="fatherName">Father's Name / पिता का नाम *</label>
+          <input id="fatherName" name="Father's Name" required placeholder="Enter father's name">
+        </div>
+        <div class="field">
+          <label for="motherName">Mother's Name / माता का नाम</label>
+          <input id="motherName" name="Mother's Name" placeholder="Enter mother's name">
+        </div>
+        <div class="field">
+          <label for="dob">Date of Birth / जन्मतिथि *</label>
+          <input id="dob" name="Date of Birth" type="date" required>
+        </div>
+        <div class="field">
+          <label for="gender">Gender / लिंग *</label>
+          <select id="gender" name="Gender" required>
+            <option value="">Select</option><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="phone">Member's Mobile Number *</label>
+          <input id="phone" name="Member's Mobile Number" type="tel" inputmode="tel" required pattern="[0-9+\-\s]{10,16}" placeholder="10-digit mobile number">
+        </div>
+        <div class="field">
+          <label for="email">Email (optional)</label>
+          <input id="email" name="Email" type="email" placeholder="name@example.com">
+        </div>
+        <div class="field">
+          <label for="membershipType">Membership Type *</label>
+          <select id="membershipType" name="Membership Type" required>
+            <option value="">Select membership</option><option>General Member</option><option>Student Member</option><option>Life Member</option><option>Volunteer</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="post">Desired Role / पद (optional)</label>
+          <select id="post" name="Desired Role">
+            <option value="">No specific role</option><option>Member</option><option>Volunteer</option><option>Student Representative</option><option>Coordinator</option><option>Vice Leader</option><option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="state">State / राज्य *</label>
+          <input id="state" name="State" required placeholder="e.g. Madhya Pradesh">
+        </div>
+        <div class="field">
+          <label for="district">District / जिला *</label>
+          <input id="district" name="District" required placeholder="Enter district">
+        </div>
+        <div class="field">
+          <label for="city">City / Village / शहर या गाँव *</label>
+          <input id="city" name="City or Village" required placeholder="Enter city or village">
+        </div>
+        <div class="field">
+          <label for="pin">PIN Code / पिन कोड</label>
+          <input id="pin" name="PIN Code" inputmode="numeric" pattern="[0-9]{6}" placeholder="6-digit PIN code">
+        </div>
+        <div class="field full">
+          <label for="address">Full Address / पूरा पता *</label>
+          <textarea id="address" name="Full Address" rows="3" required placeholder="House, street, village/city, district, state"></textarea>
+        </div>
+        <div class="field full">
+          <label for="photo">Member Photo (optional) / सदस्य की फोटो</label>
+          <input id="photo" type="file" accept="image/*">
+          <p class="small">WhatsApp's prefilled message cannot attach this photo automatically. After sending the form details, attach the photo in WhatsApp if required.</p>
+        </div>
+        <div class="field full">
+          <label><input id="consent" type="checkbox" required style="width:auto;margin-right:8px"> I confirm that the details above are correct and agree to share them with Parsuram Brahman Samaj for membership registration.</label>
+        </div>
+      </div>
+      <button class="primary" type="submit">Send Registration on WhatsApp</button>
+      <button class="secondary" type="reset">Clear Form</button>
+      <p class="small">This form opens WhatsApp with a prepared message. The member must press Send in WhatsApp. This standalone form does not save submissions to a central database.</p>
+      <div id="status" role="status" aria-live="polite"></div>
+    </form>
+  </section>
+</main>
+<footer>Parsuram Brahman Samaj • Membership Registration</footer>
+<script>
+const form = document.getElementById('membershipForm');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  if(!form.reportValidity()) return;
+  const fields = [
+    ['Full Name','fullName'],["Father's Name",'fatherName'],["Mother's Name",'motherName'],
+    ['Date of Birth','dob'],['Gender','gender'],["Member's Mobile Number",'phone'],
+    ['Email','email'],['Membership Type','membershipType'],['Desired Role','post'],
+    ['State','state'],['District','district'],['City or Village','city'],
+    ['PIN Code','pin'],['Full Address','address']
+  ];
+  let message = 'PARSHURAM BRAHMAN SAMAJ\\nMEMBERSHIP REGISTRATION\\n\\n';
+  for (const [label,id] of fields) {
+    const el = document.getElementById(id);
+    const value = (el.value || '').trim();
+    if(value) message += label + ': ' + value + '\\n';
+  }
+  message += '\\nI confirm that the details provided are correct.';
+  const whatsappNumber = '918601462709';
+  const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+  window.open(url, '_blank', 'noopener,noreferrer');
+});
+</script>
+</body>
+</html>
